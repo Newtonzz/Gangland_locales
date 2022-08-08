@@ -499,10 +499,10 @@ Locales['en'] = {
   ['admin_menu_lobby_manage_actions_playerlist_manage_player_actions_msg_error'] = 'Something went wrong...',
 
   ['admin_menu_keybinds_open'] = 'Open Admin Menu',
-  ['admin_menu_keybinds_noclip'] = 'Noclip activate/deactivate',
+  ['admin_menu_keybinds_noclip'] = '~g~Enable~w~/~r~Disable~w~ Noclip',
 
-  ['admin_menu_messages_noclip_on'] = 'NoClip Active',
-  ['admin_menu_messages_noclip_off'] = 'NoClip Disabled',
+  ['admin_menu_messages_noclip_on'] = 'NoClip ~g~Enabled~w~',
+  ['admin_menu_messages_noclip_off'] = 'NoClip ~r~Disabled~w~',
 
   -- NOTIFICATIONS --
   ['noti_success'] = 'Success',
@@ -607,19 +607,19 @@ Locales['en'] = {
   -- NEW --
   ['f2_ffa_desc_1'] = 'Map: ~b~%s~w~ | Bodyshot: %s\nWeapon: ~b~%s~w~',
   ['f2_ffa_desc_2'] = 'Map: ~b~%s~w~ | Bodyshot: %s',
-  ['f2_ffa_msg_error_full_lobby'] = 'Lobby full!',
+  ['f2_ffa_msg_error_full_lobby'] = 'Lobby is ~r~full~w~!',
   ['f2_ffa_msg_error_already_in_lobby'] = 'You are already in this lobby!',
   -- NEW --
-  ['f2_component_msg_remove_component'] = 'Press ~r~Enter~w~ to remove the components',
-  ['f2_component_msg_add_component'] = 'Press ~r~Enter~w~ to equip the components',
-  ['f2_component_msg_weapon_cant_equip'] = 'The weapon cannot use this ~r~component~w~!',
-  ['f2_component_info_need_weapon_in_hand_1'] = 'You gotta have a gun',
+  ['f2_component_msg_remove_component'] = 'Press ~r~Enter~w~ to remove the ~r~component~w~',
+  ['f2_component_msg_add_component'] = 'Press ~r~Enter~w~ to equip the ~r~component~w~',
+  ['f2_component_msg_weapon_cant_equip'] = 'This ~r~component~w~ is incompatible with this gun.',
+  ['f2_component_info_need_weapon_in_hand_1'] = 'You need to have a gun',
   ['f2_component_info_need_weapon_in_hand_2'] = 'in your hands',
   -- NEW --
   ['f2_keybinds_player_menu'] = '',
   ['f2_keybinds_use_medkit'] = 'Use bandage',
   ['f2_keybinds_use_bulletproof'] = 'Equip armor',
-  ['f2_keybinds_msg_progbar_bulletproof'] = 'Equipping armor.....',
+  ['f2_keybinds_msg_progbar_bulletproof'] = 'Equipping armor...',
   ['f2_keybinds_msg_progbar_medkit'] = 'Bandaging...',
   ['f2_keybinds_msg_title'] = 'Information',
   ['f2_keybinds_msg_medkit_cancel'] = 'Canceled bandaging.',
@@ -670,18 +670,18 @@ Locales['en'] = {
   ['gamelobby_return'] = 'Return',
   ['gamelobby_players_inlobby'] = 'PLAYERS IN LOBBY',
   -- Chat Message --
-  ['chat_message_admission'] = 'Reminder: You need a clip for an unbanning!',
-  ['chat_clothing_msg'] = 'Clothing-ID: ',
+  ['chat_message_admission'] = 'Reminder: You need a clip to be able to appeal your ban.',
+  ['chat_clothing_msg'] = 'Clothing ID: ',
   ['chat_selected_msg'] = ' selected',
-  ['chat_warnings_teamkiller'] = 'You dont get XP or Kills for teamkilling! Warnings until kick: %s/3',
-  ['kick_message_teamkiller'] = 'You have been kicked for team killing.',
+  ['chat_warnings_teamkiller'] = 'Stop killing your teammates, Warnings until kick: %s/3, Repeated offenses may result in a ban.',
+  ['kick_message_teamkiller'] = 'You have been kicked for Teamkilling, repeated offenses may result in a ban.',
   -- Fraction Stuff --
-  ['pfinvite_command1'] = 'You have succesfully invited ID:',
-  ['pfinvite_command2'] = ' into your Fraction!',
-  ['pfkick_command1'] = 'You have succesfully kicked ID:',
-  ['pfkick_command2'] = ' from your Fraction!',
+  ['pfinvite_command1'] = 'You have successfully invited ID:',
+  ['pfinvite_command2'] = ' into your Faction!',
+  ['pfkick_command1'] = 'You have successfully removed ID:',
+  ['pfkick_command2'] = ' from your Faction!',
   ['faction_set_outfit'] = 'Set Outfit',
-  ['faction_set_outfit_error'] = 'Only the fraction leader can create outfits',
+  ['faction_set_outfit_error'] = 'Only the ~r~Faction Leader~w~ can create outfits',
   ['fraction_label'] = '~r~Fraction~w~',
   ['fraction_success'] = '~g~Success~w~',
   ['fraction_submit_outfit'] = 'You have successfully submitted an outfit for review',
@@ -718,9 +718,9 @@ Locales['en'] = {
   ['lobbys_winner'] = '~g~Winner~w~',
   ['lobbys_loser'] = '~r~Loser~w~',
   -- lobbys/spawn.lua --
-  ['lobbys_waiting'] = 'Waiting for player: %s/%s',
-  ['killstreak_message'] = '^1%s ^7 Has a killstreak of ^1%s',
-  ['gungame_win'] = '^3%s ^7won the Gungame!',
+  ['lobbys_waiting'] = 'Waiting for players to join lobby: %s/%s',
+  ['killstreak_message'] = '^1%s ^7 has a ^1%s ^0Killstreak!', # reworded a bit used ^0 in-order to set the colour to white.
+  ['gungame_win'] = '^3%s ^7won the Gun Game Match!',
 
   -- UI Translations --
   ['ui'] = {
@@ -734,7 +734,7 @@ Locales['en'] = {
           ['level_vehicles'] = 'Vehicle Levels',
           ['private_vehicles'] = 'Private Vehicles',
           -- car buttons --
-          ['parkout'] = 'Park out',
+          ['parkout'] = 'Spawn Vehicle',
           ['level'] = 'Level',
       },
       ['respawn_text'] = 'RESPAWN IN ', --
@@ -747,19 +747,29 @@ Locales['en'] = {
           "You got caught lacking by %s",
           "You have been slammed by %s",
           "You have been sent to sleep by %s",
+          "You have been drilled by %s", # From here on are the new Death screen messages i think should be added (Amir)
+          "%s has sent you into the light",
+          "%s has absolutely shitted on you",
+          "%s has annihilated you",
+          "You've been riddled with bullets by %s",
+          "You got clapped by %s",
+          "You got shitted on by %s",
+          "You got clowned on by %s",
       },
       ['faction_system'] = {
           ['members'] = 'Members',
           -- buttons --
-          ['back'] = 'Back',
+          ['back'] = 'Go Back',
           ['private_factions'] = 'Private Factions',
           -- private faction list --
-          ['access'] = 'Access',
+          ['access'] = 'Accessible',
+          # Changed it from Access -> Accessible, just more grammatically correct. 
           ['no_access'] = 'No Access',
+          # Altered the Faction_Desc a bit
           ['faction_desc'] = [[  
             Choose your faction and choose between our gangwar mode or different FFA lobbies.
-            In our classic gangwar mode you have the opportunity to fight against other factions on the streets.
-            Park a vehicle and go in search of enemies.
+            In our classic gangwar mode you have the opportunity to fight against other factions/gangs on the street.
+            Go grab out a vehicle, and start hunting your enemies.
             While you usually only have the choice between certain weapons in the FFA lobbies, you can choose between several weapons in Gangwar mode.
             Increase in our level system to unlock more vehicles.
           ]],
